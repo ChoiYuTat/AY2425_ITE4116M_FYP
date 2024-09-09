@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class luna : MonoBehaviour
 {
+    private bool isclimb;
     private Rigidbody RD;
     public float movespeed;
     private Vector2 move;
@@ -17,6 +18,8 @@ public class luna : MonoBehaviour
     private Animator animator;
     private Vector2 looDirection = new Vector2(1, 0);
     private float moveScacle;
+    float h = Input.GetAxisRaw("Horizontal");
+    float v = Input.GetAxisRaw("Vertical");
 
     void Start()
     {
@@ -30,7 +33,8 @@ public class luna : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+
+    public void Update()
     {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
@@ -62,6 +66,10 @@ public class luna : MonoBehaviour
     }
     private void FixedUpdate()
     {
+            Move();
+    }
+    private void Move()
+    {
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
         //give transoform
@@ -72,7 +80,7 @@ public class luna : MonoBehaviour
         //position= position+ movespeed * move * Time.fixedDeltaTime;
         //transform.position = position;
         RD.MovePosition(transform.position + position);
-    } 
+    }
     public void ChangHealth(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
@@ -81,6 +89,20 @@ public class luna : MonoBehaviour
     private  int GetChurrentHp()
     {
         return currentHealth;
+    }
+
+    public void cisclimb(bool off)
+    {
+        isclimb = off;
+        animator.SetBool("Climb", off);
+        Debug.Log("111");
+    }
+    public void climb(bool start)
+    {
+        Debug.Log("000");
+        isclimb = true;
+        animator.SetBool("Climb", start);
+        RD.useGravity = false;
     }
 }
 
