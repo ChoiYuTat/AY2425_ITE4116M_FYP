@@ -105,8 +105,10 @@
 -define:ENABLE_TIMELINE
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:UNITY_POST_PROCESSING_STACK_V2
+-define:DOTWEEN
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/DOTween/DOTween.dll"
 -r:"C:/Program Files/Unity 2021.1.0f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"C:/Program Files/Unity 2021.1.0f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
 -r:"C:/Program Files/Unity 2021.1.0f1/Editor/Data/Managed/UnityEngine/UnityEditor.dll"
@@ -326,6 +328,16 @@
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/DOTween/Modules/DOTweenModuleAudio.cs"
+"Assets/DOTween/Modules/DOTweenModuleEPOOutline.cs"
+"Assets/DOTween/Modules/DOTweenModulePhysics.cs"
+"Assets/DOTween/Modules/DOTweenModulePhysics2D.cs"
+"Assets/DOTween/Modules/DOTweenModuleSprite.cs"
+"Assets/DOTween/Modules/DOTweenModuleUI.cs"
+"Assets/DOTween/Modules/DOTweenModuleUnityVersion.cs"
+"Assets/DOTween/Modules/DOTweenModuleUtils.cs"
+"Assets/scripts 1/BattleControl.cs"
+"Assets/scripts 1/BattleObj.cs"
 "Assets/scripts 1/Climb.cs"
 "Assets/scripts 1/luna.cs"
 "Assets/scripts 1/Potion.cs"
